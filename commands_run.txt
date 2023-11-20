@@ -1,0 +1,15 @@
+python3 --version
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3.10-venv
+python3 -m venv redfin_venv
+source redfin_venv/bin/activate
+pip install boto3
+pip install --upgrade awscli
+aws configure
+pip install apache-airflow
+pip install apache-airflow-providers-amazon
+airflow version
+airflow standalone
+aws iam list-roles | grep 'EMR_DefaultRole\|EMR_EC2_DefaultRole'
+aws emr create-default-roles
